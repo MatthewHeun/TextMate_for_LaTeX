@@ -111,25 +111,27 @@ To edit keyboard shortcuts or add your own, select
 \label{tab:keyboard_shortcuts}
 \end{table}
 
+% section sec:keyboard_shortcuts (end)
+
 
 %%%%%%%%%%%%%%%%%%%%
 \section{Document Viewing and Typesetting} % (fold)
 \label{sec:document_viewing_and_typesetting}
 %%%%%%%%%%%%%%%%%%%%
-I find that the Eiffel theme (\texttt{View|Theme|Eiffel}) is best 
-for viewing \LaTeX{} documents. 
+I find Eiffel to be the best theme for viewing \LaTeX{} documents
+(\texttt{View|Theme|Eiffel}). 
 
 \cmdkey\texttt{R} typesets the \LaTeX{} document with \texttt{pdflatex}. 
 
 Use the Skim \texttt{.pdf} viewer (\url{http://skim-app.sourceforge.net}).
-In TextMate, choose \texttt{Bundles|LaTeX|Preferences\dots}.
+In TextMate, choose \texttt{Bundles|LaTeX| Preferences\dots}.
 Then, choose \texttt{Skim} from the \texttt{View In\dots} menu.
 To enable \texttt{pdfsync}, insert \verb!\synctex=1! 
 at the top of your \LaTeX{} file.
 In Skim, choose \texttt{Skim|Preferences\dots|Sync}. 
 Then, choose \texttt{Preset:~TextMate} to enable round-tripping from Skim to TextMate. 
 A \cmdkey\shiftkey-click anywhere in the \texttt{.pdf} file within Skim 
-should take you close to the appropriate place in TextMate.
+should take you near to the appropriate text in TextMate.
 
 For multi-file documents, set a root directive. 
 To do so, open each subfile of the document. 
@@ -145,17 +147,17 @@ Table~\ref{tab:typesetting_keyboard_shortcuts} shows some of the keyboard shortc
 \centering
 \caption{Keyboard shortcuts for typesetting.}
 \begin{tabular}{r|l|l}
-	In an open \texttt{.tex} file, type \dots & to \dots      & Comments                  \\
+	In TextMate, type \dots & to \dots      & Comments                  \\
 	\hline
 	\cmdkey\texttt{R}           & typeset the document            &                           \\
 	\texttt{F1}                 & fold section containing cursor  & Consider installing Palua \\
-	\ctlkey\optkey\cmdkey\texttt{D}&show/hide file browser        & Configure location in preferences \\
+	\ctlkey\optkey\cmdkey\texttt{D}&show/hide file browser        & Configure in \texttt{TextMate|Preferences\dots|Projects} \\
 	
 \end{tabular}
 \label{tab:typesetting_keyboard_shortcuts}
 \end{table}
 
-% section document_typesetting (end)
+% section document_viewing_and_typesetting (end)
 
 
 %%%%%%%%%%%%%%%%%%%%
