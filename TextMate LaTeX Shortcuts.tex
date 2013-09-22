@@ -1,0 +1,182 @@
+\title{TextMate \LaTeX{} Bundle Keyboard Shortcuts}
+\author{Matthew Kuperus Heun}
+\date{\today}
+
+\documentclass[10pt]{article}
+\usepackage{verbatim}
+% Provides apple symbols
+% Downloaded from http://dl.dropboxusercontent.com/u/10932738/index.html. 
+% Referenced at http://tex.stackexchange.com/questions/19646/how-to-typeset-special-apple-mac-keyboard-symbols
+\usepackage{applekeys} 
+\usepackage[margin=1.0in]{geometry}
+\usepackage{hyperref}
+\usepackage{color}
+% Provides round-trip syncing from pdf viewer to text editor
+% \usepackage{pdfsync} % Unnecessary, because pdflatex supports synctex automatically.
+\synctex=1
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+TextMate is a fantastic editor for \LaTeX{} documents. 
+This short paper summarizes many features, including
+keyboard shortcuts, 
+typsetting, and 
+GitHub integration,
+available in TextMate's \LaTeX{} bundle.
+\end{abstract}
+
+\section{Introduction}
+TextMate is a fantastic text editor for \LaTeX{} documents.
+It is the best editor I have found for
+writing \LaTeX{} documents on the Mac.
+However, remembering all the features can be difficult.
+This document summarizes many useful features and keyboard shortcuts.
+
+TextMate can be found at \url{http://macromates.com}. 
+Documentation for the TextMate's \LaTeX{} bundle can be found at
+\url{} 
+
+You'll need to install the \LaTeX{} distribution for the Mac.
+See \url{https://www.tug.org/mactex/}.
+
+
+%%%%%%%%%%%%%%%%%%%%
+\section{Keyboard Shortcuts} % (fold)
+\label{sec:keyboard_shortcuts}
+%%%%%%%%%%%%%%%%%%%%
+\LaTeX{}-specific keyboard shortcuts in TextMate can be found in Table~\ref{tab:keyboard_shortcuts}.
+To edit keyboard shortcuts or add your own, select
+\texttt{Bundles|LaTeX|Edit Configuration File}.
+
+\begin{table}
+\centering
+\caption{Keyboard shortcuts for editing.}
+\begin{tabular}{r|l|l}
+	Select text and type \dots   & to obtain \dots                        & Comments                \\
+	\hline
+	\cmdkey~\texttt{I}           & \verb!\emph{selection}!                &                         \\
+	\cmdkey~\texttt{B}           & \verb!\textbf{selection}!              &                         \\
+	\cmdkey~\texttt{U}           & \verb!\underline{selection}!           &                         \\
+	\cmdkey~\texttt{K}           & \verb!\texttt{selection}!              & typewriter font         \\
+	\cmdkey~\optkey~\texttt{K}   & \verb=\verb!selection!=                & verbatim                \\
+	\cmdkey~\shiftkey~\texttt{K} & \verb!\textsc{selection}!              & small caps              \\
+	\ctlkey~\shiftkey~\texttt{I} & \verb!selection\index{selection}!      & adds selection to index \\
+	\hline
+	Type \dots        & to obtain \dots                            & Label prefix   \\
+	\hline
+	part\tabkey       & \verb!\part{part name}!                    & \texttt{prt:}           \\
+	chapter\tabkey    & \verb!\chapter{chapter name}!              & \texttt{cha:}           \\
+	sec\tabkey        & \verb!\section{section name}!              & \texttt{sec:}           \\
+	sub\tabkey        & \verb!\subsection{subsection name}!        & \texttt{sub:}           \\
+	subs\tabkey       & \verb!\subsubsection{subsubsection name}!  & \texttt{ssub:}          \\
+	par\tabkey        & \verb!\paragraph{paragraph name}!          & \texttt{par:}           \\
+	subp\tabkey       & \verb!\subparagraph{subparagraph name}!    & \texttt{subp:}          \\
+	\hline
+	Type \dots                & to obtain \dots                  & Comments                                                 \\
+	\hline
+	a--z\cmdkey\verb!\!       & $\alpha$ -- $\zeta$              & lowercase Greek letters                                  \\
+	e\cmdkey\verb!\!          & $\epsilon$, $\varepsilon$        & \cmdkey\verb!\! again: $\varepsilon$                     \\
+	do\cmdkey\verb!\!         & \dots                            & elipses                                                  \\
+	ap\cmdkey\verb!\!         & $\approx$                        &                                                          \\
+	ar\cmdkey\verb!\!         & arcsin                           & \cmdkey\verb!\! again: \texttt{arccos}, \texttt{arctan}  \\
+	ah\cmdkey\verb!\!         & arcsinh                          & \cmdkey\verb!\! again: \texttt{arccosh}, \texttt{arctanh}\\
+	\hline
+	fr\ctlkey\shiftkey. or frac\ctlkey\shiftkey.    & \verb!\frac{num}{}!              & $\frac{num}{}$      \\
+	s\ctlkey\shiftkey. or sum\ctlkey\shiftkey.      & \verb!\sum_{bot}^{}!             & $\sum_{bot}^{}$     \\ 
+	p\ctlkey\shiftkey. or prod\ctlkey\shiftkey.     & \verb!\prod_{bot}^{}!            & $\prod_{bot}^{}$    \\ 
+	l\ctlkey\shiftkey. or lim\ctlkey\shiftkey.      & \verb!\lim_{}!                   &                     \\
+	fn\ctlkey\shiftkey.                             & \verb!\footnote{}!               &                     \\ 
+	proof\ctlkey\shiftkey.                          & \verb!\proof{}!                  &                     \\
+	nc\ctlkey\shiftkey.                             & \verb!\newcommand{}{}!           &                     \\
+	usep\ctlkey\shiftkey.                           & \verb!\usepackage{}!             &                     \\
+	url\ctlkey\shiftkey.                            & \verb!\url{}!                    &                     \\
+	\hline
+	eq\tabkey              & \verb!\begin{equation}!         & Equation environment w/out \verb!\label!  \\
+	tab\tabkey             & \verb!\begin{tabular}{c}!       & Tabular environment                       \\
+	enum\tabkey            & \verb!\begin{enumerate}!        & Enumerate environment w/ \verb!\item!     \\
+	item\tabkey            & \verb!\begin{itemize}!          & Itemize environment w/ \verb!\item!       \\
+	desc\tabkey            & \verb!\begin{description}!      & Description environment w/ \verb!\item!   \\
+	\hline
+	equation\tabkey        & \verb!Equation~\eqref{eq:}!     & \tabkey~again for next field, \esckey~to cycle labels        \\
+	figure\tabkey          & \verb!Figure~\ref{fig:}!        & \tabkey~again for next field, \esckey~to cycle labels       \\
+	listing\tabkey         & \verb!Listing~\ref{lst:}!       & \tabkey~again for next field, \esckey~to cycle labels       \\
+	page\tabkey            & \verb!page~\pageref{}!          & \tabkey~again for next field, \esckey~to cycle labels       \\
+	section\tabkey         & \verb!Section~\ref{sec:}!       & \tabkey~again for next field, \esckey~to cycle labels       \\
+	table\tabkey           & \verb!Table~\ref{tab:}!         & \tabkey~again for next field, \esckey~to cycle labels       \\
+	
+	
+\end{tabular}
+\label{tab:keyboard_shortcuts}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%
+\section{Document Typesetting and Editing} % (fold)
+\label{sec:document_typesetting}
+%%%%%%%%%%%%%%%%%%%%
+I find that the Eiffel theme is best for viewing \LaTeX{} documents in TextMate. 
+To change themes, select \texttt{View|Theme|Eiffel}.
+
+\cmdkey\texttt{R} typesets the \LaTeX{} document with \texttt{pdflatex}. 
+
+For multi-file documents, set a root directive.
+To do so, open each subfile of the document. 
+Then, select \texttt{Bundles|LaTeX|File Preferences|Set Master File} in TextMate.
+In the dialog box, select the root file for the document. 
+The result will be a special comment at the top of the subfile of the form
+\verb&%!TEX root = <Path_to_root_file.tex>&.
+With this comment in place, \cmdkey\texttt{R} in any subfile will typeset the entire document.
+
+Use the Skim \texttt{.pdf} viewer (\url{http://skim-app.sourceforge.net}).
+In TextMate, choose \texttt{Bundles|LaTeX|Preferences\dots}.
+Then, choose \texttt{Skim} from the \texttt{View In\dots} menu.
+To enable \texttt{pdfsync}, insert \verb!\synctex=1! 
+at the top of your \LaTeX{} file.
+In Skim, choose \texttt{Skim|Preferences\dots|Sync}. 
+Then, choose \texttt{Preset:~TextMate} to enable round-tripping from Skim to TextMate. 
+A \cmdkey\shiftkey-click anywhere in the \texttt{.pdf} file within Skim 
+should take you close to the appropriate place in TextMate.
+
+Table~\ref{tab:keyboard_shortcuts}
+
+\begin{table}
+\centering
+\caption{Keyboard shortcuts for typesetting.}
+\begin{tabular}{r|l|l}
+	In an open \texttt{.tex} document, type \dots & to \dots      & Comments                  \\
+	\hline
+	\cmdkey\texttt{R}           & typeset the document            &                           \\
+	\texttt{F1}                 & fold section containing cursor  & Consider installing Palua \\ 
+	
+\end{tabular}
+\label{tab:typesetting_keyboard_shortcuts}
+\end{table}
+
+% section document_typesetting (end)
+
+
+%%%%%%%%%%%%%%%%%%%%
+\section{GitHub Integration} % (fold)
+\label{sec:github_integration}
+%%%%%%%%%%%%%%%%%%%%
+
+% section github_integration (end)
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+\section{Miscellaneous} % (fold)
+\label{sec:miscellaneous}
+%%%%%%%%%%%%%%%%%%%%
+
+
+
+% section miscellaneous (end)
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+
+\end{document}
+This is never printed
