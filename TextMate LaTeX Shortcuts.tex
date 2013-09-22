@@ -76,12 +76,12 @@ To edit keyboard shortcuts or add your own, select
 	\hline
 	Type \dots                & to obtain \dots                  & Comments                                                 \\
 	\hline
-	a--z\cmdkey\verb!\!       & $\alpha$ -- $\zeta$              & lowercase Greek letters                                  \\
-	e\cmdkey\verb!\!          & $\epsilon$, $\varepsilon$        & \cmdkey\verb!\! again: $\varepsilon$                     \\
-	do\cmdkey\verb!\!         & \dots                            & elipses                                                  \\
-	ap\cmdkey\verb!\!         & $\approx$                        &                                                          \\
-	ar\cmdkey\verb!\!         & arcsin                           & \cmdkey\verb!\! again: \texttt{arccos}, \texttt{arctan}  \\
-	ah\cmdkey\verb!\!         & arcsinh                          & \cmdkey\verb!\! again: \texttt{arccosh}, \texttt{arctanh}\\
+	a--z\cmdkey\verb!\!       & \verb!\alpha! -- \verb!\zeta!    & lowercase Greek letters                                  \\
+	e\cmdkey\verb!\!          & \verb!\epsilon!                  & \cmdkey\verb!\! again: \verb!\varepsilon!                     \\
+	do\cmdkey\verb!\!         & \verb!\dots!                     & $\dots$ (elipses)                                                  \\
+	ap\cmdkey\verb!\!         & \verb!\approx!                   & $\approx$                                                         \\
+	ar\cmdkey\verb!\!         & \texttt{arcsin}                  & \cmdkey\verb!\! again: \texttt{arccos}, \texttt{arctan}  \\
+	ah\cmdkey\verb!\!         & \texttt{arcsinh}                 & \cmdkey\verb!\! again: \texttt{arccosh}, \texttt{arctanh}\\
 	\hline
 	fr\ctlkey\shiftkey. or frac\ctlkey\shiftkey.    & \verb!\frac{num}{}!              & $\frac{num}{}$      \\
 	s\ctlkey\shiftkey. or sum\ctlkey\shiftkey.      & \verb!\sum_{bot}^{}!             & $\sum_{bot}^{}$     \\ 
@@ -113,21 +113,13 @@ To edit keyboard shortcuts or add your own, select
 
 
 %%%%%%%%%%%%%%%%%%%%
-\section{Document Typesetting and Editing} % (fold)
-\label{sec:document_typesetting}
+\section{Document Viewing and Typesetting} % (fold)
+\label{sec:document_viewing_and_typesetting}
 %%%%%%%%%%%%%%%%%%%%
-I find that the Eiffel theme is best for viewing \LaTeX{} documents in TextMate. 
-To change themes, select \texttt{View|Theme|Eiffel}.
+I find that the Eiffel theme (\texttt{View|Theme|Eiffel}) is best 
+for viewing \LaTeX{} documents. 
 
 \cmdkey\texttt{R} typesets the \LaTeX{} document with \texttt{pdflatex}. 
-
-For multi-file documents, set a root directive. 
-To do so, open each subfile of the document. 
-Then, select \texttt{Bundles|LaTeX|File Preferences|Set Master File} in TextMate.
-In the dialog box, select the root file for the document. 
-The result will be a special comment at the top of the subfile of the form
-\verb&%!TEX root = <Path_to_root_file.tex>&.
-With this comment in place, \cmdkey\texttt{R} in any subfile will typeset the entire document.
 
 Use the Skim \texttt{.pdf} viewer (\url{http://skim-app.sourceforge.net}).
 In TextMate, choose \texttt{Bundles|LaTeX|Preferences\dots}.
@@ -139,16 +131,25 @@ Then, choose \texttt{Preset:~TextMate} to enable round-tripping from Skim to Tex
 A \cmdkey\shiftkey-click anywhere in the \texttt{.pdf} file within Skim 
 should take you close to the appropriate place in TextMate.
 
-Table~\ref{tab:keyboard_shortcuts}
+For multi-file documents, set a root directive. 
+To do so, open each subfile of the document. 
+Then, select \texttt{Bundles|LaTeX|File Preferences|Set Master File} in TextMate.
+In the dialog box, select the root file for the document. 
+The result will be a special comment at the top of the subfile of the form
+\verb&%!TEX root = <Path_to_root_file.tex>&.
+With this comment in place, \cmdkey\texttt{R} in any subfile will typeset the entire document.
+
+Table~\ref{tab:typesetting_keyboard_shortcuts} shows some of the keyboard shortcuts for typesetting.
 
 \begin{table}
 \centering
 \caption{Keyboard shortcuts for typesetting.}
 \begin{tabular}{r|l|l}
-	In an open \texttt{.tex} document, type \dots & to \dots      & Comments                  \\
+	In an open \texttt{.tex} file, type \dots & to \dots      & Comments                  \\
 	\hline
 	\cmdkey\texttt{R}           & typeset the document            &                           \\
-	\texttt{F1}                 & fold section containing cursor  & Consider installing Palua \\ 
+	\texttt{F1}                 & fold section containing cursor  & Consider installing Palua \\
+	\ctlkey\optkey\cmdkey\texttt{D}&show/hide file browser        & Configure location in preferences \\
 	
 \end{tabular}
 \label{tab:typesetting_keyboard_shortcuts}
