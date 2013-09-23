@@ -1,4 +1,4 @@
-\title{TextMate \LaTeX{} Bundle Keyboard Shortcuts}
+\title{Working with TextMate's \LaTeX{} Bundle}
 \author{Matthew Kuperus Heun}
 \date{\today}
 
@@ -124,14 +124,22 @@ I find Eiffel to be the best theme for viewing \LaTeX{} documents
 \cmdkey\texttt{R} typesets the \LaTeX{} document with \texttt{pdflatex}. 
 
 Use the Skim \texttt{.pdf} viewer (\url{http://skim-app.sourceforge.net}).
-In TextMate, choose \texttt{Bundles|LaTeX| Preferences\dots}.
+Skim has a nice feature: upon opening the typeset \texttt{.pdf} file,
+Skim places a small red dot at the position corresponding to the cursor's 
+location in TextMate. 
+Because the cursor location in TextMate is typically where you were working,
+you can readily find the location of interest in the \texttt{.pdf} document.
+
+To set up the Skim/TextMate features, 
+first choose \texttt{Bundles|LaTeX|Preferences\dots} in TextMate.
 Then, choose \texttt{Skim} from the \texttt{View In\dots} menu.
 To enable \texttt{pdfsync}, insert \verb!\synctex=1! 
-at the top of your \LaTeX{} file.
+at the top of your root \LaTeX{} file.
+
 In Skim, choose \texttt{Skim|Preferences\dots|Sync}. 
 Then, choose \texttt{Preset:~TextMate} to enable round-tripping from Skim to TextMate. 
 A \cmdkey\shiftkey-click anywhere in the \texttt{.pdf} file within Skim 
-should take you near to the appropriate text in TextMate.
+should take you near the appropriate text in the TextMate editor window.
 
 For multi-file documents, set a root directive. 
 To do so, open each subfile of the document. 
@@ -150,7 +158,7 @@ Table~\ref{tab:typesetting_keyboard_shortcuts} shows some of the keyboard shortc
 	In TextMate, type \dots & to \dots      & Comments                  \\
 	\hline
 	\cmdkey\texttt{R}           & typeset the document            &                           \\
-	\texttt{F1}                 & fold section containing cursor  & Consider installing Palua \\
+	\texttt{F1}                 & fold section containing cursor  & Consider installing Palua from the Mac App Store \\
 	\ctlkey\optkey\cmdkey\texttt{D}&show/hide file browser        & Configure in \texttt{TextMate|Preferences\dots|Projects} \\
 	\cmdkey\shiftkey [, \cmdkey\shiftkey ] & Select previous/next file tab  &          \\
 	
@@ -166,14 +174,59 @@ Table~\ref{tab:typesetting_keyboard_shortcuts} shows some of the keyboard shortc
 \label{sec:github_integration}
 %%%%%%%%%%%%%%%%%%%%
 
+TextMate integrates well with GitHub (\url{http://www.github.com}). 
+Table~\ref{tab:github_keyboard_shortcuts} shows useful GitHub keyboard shortcuts.
+
+TextMate works best when you clone GitHub projects to your local disk using SSH. 
+To set up your computer for GitHub with SSH, follow the instructions at
+\url{https://help.github.com/articles/generating-ssh-keys}. 
+TextMate automatically detects the project's GitHub repository 
+when you open a file from the repository.
+
+To clone a repository to your local disk using SSH, 
+first find the repository with a web browser on GitHub.
+In the case of the repository that contains this document, 
+the URL is \url{https://github.com/MatthewHeun/TextMate_for_LaTeX}. 
+Next, look on the right side of the page and click on 
+the \texttt{SSH} hyperlink in the 
+``You can clone with HTTPS, SSH, or Subversion'' text.
+Then, click the ``copy to clipboard'' button.
+Next, open a terminal window and navigate to the directory in which you want to 
+put the repository.
+For the repository that contains this document, you would then type
+\texttt{git clone} and paste the SSH clone link from the clipboard.
+If you want to clone this repository, you would see:
+
+\verb!git clone git@github.com:MatthewHeun/TextMate_for_LaTeX.git!
+
+\noindent at the command line prompt in the terminal window.
+
+\begin{table}
+\centering
+\caption{GitHub keyboard shortcuts.}
+\begin{tabular}{r|l|l}
+	In TextMate, type \dots & to \dots      & Comments                                       \\
+	\hline
+	\cmdkey\texttt{Y}           & open the GitHub menu            &                          \\
+	\cmdkey\texttt{Y 5}         & pull changes                    &                          \\
+	\cmdkey\texttt{Y 2}         & commit modified files           & Detects changes in selected (in browser) only \\
+	\cmdkey\texttt{Y 4}         & push commits                    &                          \\
+\end{tabular}
+\label{tab:github_keyboard_shortcuts}
+\end{table}
+
 % section github_integration (end)
 
 
+%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgements} % (fold)
+\label{sec:acknowledgements}
+%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%
-\section{Miscellaneous} % (fold)
-\label{sec:miscellaneous}
-%%%%%%%%%%%%%%%%%%%%
+My thanks goes to Macromates, Allan Odgaard, and all those working 
+on the open source TextMate project for providing this awesome editor.
+Thanks also to all those who contributed to the \LaTeX{} bundle for TextMate,
+(\url{https://github.com/textmate/latex.tmbundle}).
 
 
 
@@ -183,4 +236,3 @@ Table~\ref{tab:typesetting_keyboard_shortcuts} shows some of the keyboard shortc
 \bibliography{main}
 
 \end{document}
-This is never printed
