@@ -126,12 +126,12 @@ Useful additions are shown in Table~\ref{tab:additions_to_plist}.
 \centering
 \caption{Useful additions to the \texttt{latex\_config.plist} file.}
 \begin{tabular}{r|l|l|l}
-	In \texttt{commands}, enter \dots & to allow \dots      & to give              & Comments \\
+	In \texttt{commands} section, enter \dots & to allow \dots     & to give              & Comments \\
 	\hline
-	\verb!dot = "\\dot{$1} $0";!   & \texttt{dot}\cmdkey\shiftkey. & \verb!\dot{}! & Overdot \\
-	\verb!sub = "_{$1}$0";!        & \texttt{sub}\cmdkey\shiftkey. & \verb!_{}!    & Subscript \\
-	\verb!sup = "^{$1}$0";!        & \texttt{sup}\cmdkey\shiftkey. & \verb!^{}!    & Superscript \\
-	\verb!mr = "\\mathrm{$1}$0";!  & \texttt{mr}\cmdkey\shiftkey.  & \verb!\mathrm{}! & \\
+	\verb!dot = "\\dot{$1}$0";!  & \texttt{dot}\cmdkey\shiftkey. & \verb!\dot{}! & Overdot \\
+	\verb!sub = "_{$1}$0";!      & \texttt{sub}\cmdkey\shiftkey. & \verb!_{}!    & Subscript \\
+	\verb!sup = "^{$1}$0";!      & \texttt{sup}\cmdkey\shiftkey. & \verb!^{}!    & Superscript \\
+	\verb!mr = "\\mathrm{$1}$0";!  & \texttt{mr}\cmdkey\shiftkey.  & \verb!\mathrm{}! & Removes math typsetting\\
 \end{tabular}
 \label{tab:additions_to_plist}
 \end{table}
@@ -217,15 +217,14 @@ Next, look on the right side of the page and click on
 the \texttt{SSH} hyperlink in the 
 ``You can clone with HTTPS, SSH, or Subversion'' text.
 Then, click the ``copy to clipboard'' button.
-Next, open a terminal window and navigate to the directory in which you want to 
+Then, open a terminal window and navigate to the directory in which you want to 
 put the repository.
-For the repository that contains this document, you would then type
-\texttt{git clone} and paste the SSH clone link from the clipboard.
-If you want to clone this repository, you would see:
+Finally, type \texttt{git clone} and paste the SSH clone link from the clipboard.
+To clone this repository, you would see:
 
 \verb!git clone git@github.com:MatthewHeun/TextMate_for_LaTeX.git!
 
-\noindent at the command line prompt in the terminal window.
+\noindent on the command line in the terminal window.
 
 \begin{table}
 \centering
