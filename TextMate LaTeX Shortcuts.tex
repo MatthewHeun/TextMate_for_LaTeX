@@ -47,41 +47,58 @@ See \url{https://www.tug.org/mactex/}.
 \label{sec:keyboard_shortcuts}
 %%%%%%%%%%%%%%%%%%%%
 \LaTeX{}-specific keyboard shortcuts in TextMate can be found in Table~\ref{tab:keyboard_shortcuts}.
-To edit keyboard shortcuts or add your own, select
-\texttt{Bundles|LaTeX|Edit Configuration File}.
 
 \begin{table}
 \centering
 \caption{Keyboard shortcuts for editing.}
 \begin{tabular}{r|l|l}
-	Select text and type \dots   & to obtain \dots                        & Comments                \\
+	Select text and type \dots   & to obtain \dots                        & Comments        \\
 	\hline
-	\cmdkey~\texttt{I}           & \verb!\emph{selection}!                &                         \\
-	\cmdkey~\texttt{B}           & \verb!\textbf{selection}!              &                         \\
-	\cmdkey~\texttt{U}           & \verb!\underline{selection}!           &                         \\
-	\cmdkey~\texttt{K}           & \verb!\texttt{selection}!              & typewriter font         \\
-	\cmdkey~\optkey~\texttt{K}   & \verb=\verb!selection!=                & verbatim                \\
-	\cmdkey~\shiftkey~\texttt{K} & \verb!\textsc{selection}!              & small caps              \\
+	\cmdkey~\texttt{I}           & \verb!\emph{selection}!                &                 \\
+	\cmdkey~\texttt{B}           & \verb!\textbf{selection}!              &                 \\
+	\cmdkey~\texttt{U}           & \verb!\underline{selection}!           &                 \\
+	\cmdkey~\texttt{K}           & \verb!\texttt{selection}!              & typewriter font \\
+	\cmdkey~\optkey~\texttt{K}   & \verb=\verb!selection!=                & verbatim        \\
+	\cmdkey~\shiftkey~\texttt{K} & \verb!\textsc{selection}!              & small caps      \\
 	\ctlkey~\shiftkey~\texttt{I} & \verb!selection\index{selection}!      & adds selection to index \\
+	
 	\hline
-	Type \dots        & to obtain \dots                            & Label prefix   \\
+	Type \dots   & to obtain \dots                        & Comments           \\  	 
 	\hline
-	part\tabkey       & \verb!\part{part name}!                    & \texttt{prt:}           \\
-	chapter\tabkey    & \verb!\chapter{chapter name}!              & \texttt{cha:}           \\
-	sec\tabkey        & \verb!\section{section name}!              & \texttt{sec:}           \\
-	sub\tabkey        & \verb!\subsection{subsection name}!        & \texttt{sub:}           \\
-	subs\tabkey       & \verb!\subsubsection{subsubsection name}!  & \texttt{ssub:}          \\
-	par\tabkey        & \verb!\paragraph{paragraph name}!          & \texttt{par:}           \\
-	subp\tabkey       & \verb!\subparagraph{subparagraph name}!    & \texttt{subp:}          \\
+		
+	part\tabkey       & \verb!\part{part name}!                    & \verb!\label{prt:part_name}!\\
+	chapter\tabkey    & \verb!\chapter{chapter name}!              & \verb!\label{cha:chapter_name}!\\
+	sec\tabkey        & \verb!\section{section name}!              & \verb!\label{sec:section_name}!\\
+	sub\tabkey        & \verb!\subsection{subsection name}!        & \verb!\label{sub:subsection_name}!\\
+	subs\tabkey       & \verb!\subsubsection{subsubsection name}!  & \verb!\label{subs:subsubsection_name}!\\
+	par\tabkey        & \verb!\paragraph{paragraph name}!          & \verb!\label{par:paragraph_name}!\\
+	subp\tabkey       & \verb!\subparagraph{subparagraph name}!    & \verb!\label{subp:subparagraph_name}!\\
+
 	\hline
-	Type \dots                & to obtain \dots                  & Comments                  \\
+	
+	eq\tabkey              & \verb!\begin{equation}!         & Equation environment w/out \verb!\label!  \\
+	tab\tabkey             & \verb!\begin{tabular}{c}!       & Tabular environment          \\
+	enum\tabkey            & \verb!\begin{enumerate}!        & Enumerate environment w/ \verb!\item!     \\
+	item\tabkey            & \verb!\begin{itemize}!          & Itemize environment w/ \verb!\item!       \\
+	desc\tabkey            & \verb!\begin{description}!      & Description environment w/ \verb!\item!   \\
+
 	\hline
+
+	equation\tabkey        & \verb!Equation~\eqref{eq:}!     & \tabkey~again for next field, \esckey~to cycle labels        \\
+	figure\tabkey          & \verb!Figure~\ref{fig:}!        & \tabkey~again for next field, \esckey~to cycle labels       \\
+	listing\tabkey         & \verb!Listing~\ref{lst:}!       & \tabkey~again for next field, \esckey~to cycle labels       \\
+	section\tabkey         & \verb!Section~\ref{sec:}!       & \tabkey~again for next field, \esckey~to cycle labels       \\
+	table\tabkey           & \verb!Table~\ref{tab:}!         & \tabkey~again for next field, \esckey~to cycle labels       \\
+	page\tabkey            & \verb!page~\pageref{}!          & \tabkey~again for next field, \esckey~to cycle labels       \\
+
+	\hline
+
 	a--z\cmdkey\verb!\!       & \verb!\alpha! -- \verb!\zeta!    & lowercase Greek letters   \\
 	e\cmdkey\verb!\!          & \verb!\epsilon!                  & \cmdkey\verb!\! again: \verb!\varepsilon!                     \\
 	do\cmdkey\verb!\!         & \verb!\dots!                     & $\dots$ (ellipsis)        \\
 	ap\cmdkey\verb!\!         & \verb!\approx!                   & $\approx$                 \\
-	ar\cmdkey\verb!\!         & \texttt{arcsin}                  & \cmdkey\verb!\! again: \texttt{arccos}, \texttt{arctan}       \\
-	ah\cmdkey\verb!\!         & \texttt{arcsinh}                 & \cmdkey\verb!\! again: \texttt{arccosh}, \texttt{arctanh}     \\
+	ar\cmdkey\verb!\!         & \verb!\arcsin!                   & \cmdkey\verb!\! again: \verb!\arccos!, \verb!\arctan!       \\
+	ah\cmdkey\verb!\!         & \verb!\arcsinh!                  & \cmdkey\verb!\! again: \verb!\arccosh!, \verb!\arctanh!     \\
 	\hline
 	fr\ctlkey\shiftkey. or frac\ctlkey\shiftkey.    & \verb!\frac{num}{}!              & $\frac{num}{}$      \\
 	s\ctlkey\shiftkey. or sum\ctlkey\shiftkey.      & \verb!\sum_{bot}^{}!             & $\sum_{bot}^{}$     \\ 
@@ -92,22 +109,30 @@ To edit keyboard shortcuts or add your own, select
 	nc\ctlkey\shiftkey.                             & \verb!\newcommand{}{}!           &    \\
 	usep\ctlkey\shiftkey.                           & \verb!\usepackage{}!             &    \\
 	url\ctlkey\shiftkey.                            & \verb!\url{}!                    &    \\
-	\hline
-	eq\tabkey              & \verb!\begin{equation}!         & Equation environment w/out \verb!\label!  \\
-	tab\tabkey             & \verb!\begin{tabular}{c}!       & Tabular environment          \\
-	enum\tabkey            & \verb!\begin{enumerate}!        & Enumerate environment w/ \verb!\item!     \\
-	item\tabkey            & \verb!\begin{itemize}!          & Itemize environment w/ \verb!\item!       \\
-	desc\tabkey            & \verb!\begin{description}!      & Description environment w/ \verb!\item!   \\
-	\hline
-	equation\tabkey        & \verb!Equation~\eqref{eq:}!     & \tabkey~again for next field, \esckey~to cycle labels        \\
-	figure\tabkey          & \verb!Figure~\ref{fig:}!        & \tabkey~again for next field, \esckey~to cycle labels       \\
-	listing\tabkey         & \verb!Listing~\ref{lst:}!       & \tabkey~again for next field, \esckey~to cycle labels       \\
-	page\tabkey            & \verb!page~\pageref{}!          & \tabkey~again for next field, \esckey~to cycle labels       \\
-	section\tabkey         & \verb!Section~\ref{sec:}!       & \tabkey~again for next field, \esckey~to cycle labels       \\
-	table\tabkey           & \verb!Table~\ref{tab:}!         & \tabkey~again for next field, \esckey~to cycle labels       \\
 
 \end{tabular}
 \label{tab:keyboard_shortcuts}
+\end{table}
+
+To edit keyboard shortcuts or add your own, select
+\texttt{Bundles|LaTeX|Edit Configuration File}. 
+Doing so moves a copy of the file 
+\verb!com.macromates.textmate.latex_config.plist!
+to the folder
+\texttt{~/Library/Preferences/}.
+Useful additions are shown in Table~\ref{tab:additions_to_plist}.
+
+\begin{table}
+\centering
+\caption{Useful additions to the \texttt{latex\_config.plist} file.}
+\begin{tabular}{r|l|l}
+	In \texttt{commands}, enter \dots & to allow \dots      & to give                  \\
+	\hline
+	\verb!dot = "\\dot{$1} $0";!   & \texttt{dot}\cmdkey\shiftkey. & \verb!\dot{}!     \\
+	\verb!sub = "_{$1}$0";!        & \texttt{sub}\cmdkey\shiftkey. & \verb!_{}!        \\
+	\verb!sup = "^{$1}$0";!        & \texttt{sup}\cmdkey\shiftkey. & \verb!^{}!        \\
+\end{tabular}
+\label{tab:additions_to_plist}
 \end{table}
 
 % section sec:keyboard_shortcuts (end)
@@ -161,7 +186,7 @@ Table~\ref{tab:typesetting_keyboard_shortcuts} shows some of the keyboard shortc
 	\ctlkey\optkey\cmdkey\texttt{D}&show/hide file browser        & Configure in \texttt{TextMate|Preferences\dots|Projects} \\
 	\cmdkey\shiftkey [, \cmdkey\shiftkey ] & Select previous/next file tab  &          \\
 	\cmdkey\texttt{T}           & open a quick file browser                 &          \\
-	
+	\cmdkey/                    & comments selected line with \verb!%!      &          \\
 \end{tabular}
 \label{tab:typesetting_keyboard_shortcuts}
 \end{table}
