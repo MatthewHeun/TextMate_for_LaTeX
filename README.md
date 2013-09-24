@@ -5,6 +5,7 @@ This repository contains a document describing many useful ways to use TextMate 
 edit LaTeX documents.
 
 I created this document to remember my setup and
-all the fantastic ways that TextMate can be configured and used for editing LaTeX files.
+all the fantastic ways that TextMate can be configured and used for editing LaTeX files. 
+I hope that others can find it useful, too.
 
 --Matthew Kuperus Heun, 2013-09-21
