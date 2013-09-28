@@ -29,17 +29,23 @@ available in TextMate's \LaTeX{} bundle.
 
 \section{Introduction}
 TextMate is a fantastic text editor for \LaTeX{} documents.
-It is the best editor I have found for
-writing \LaTeX{} documents on the Mac.
-However, remembering all the features can be difficult.
+TextMate can be extended via ``bundles'' for editing text documents 
+in many computer languages and for a wide variety of problem domains.
+The \LaTeX{} bundle for TextMate is especially useful, making TextMate
+the best editor I have found for
+composing \LaTeX{} documents on the Mac.
+However, remembering all the features of the \LaTeX{} bundle can be difficult.
 This document summarizes many useful features and keyboard shortcuts.
+
+To use TextMate to edit \LaTeX{} documents on the Mac, 
+you'll need to install the latest \LaTeX{} distribution.
+See \url{https://www.tug.org/mactex/}.
 
 TextMate can be found at \url{http://macromates.com}. 
 Download TextMate 2.0 at \url{http://macromates.com/download}. 
 The \LaTeX{} bundle is included with TextMate. 
-
-You'll need to install the \LaTeX{} distribution for the Mac.
-See \url{https://www.tug.org/mactex/}.
+Help for TextMate's \LaTeX{} bundle can be obtained from the
+\texttt{Bundles|LaTeX|Help} menu item.
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -133,17 +139,17 @@ Useful additions are shown in Table~\ref{tab:additions_to_plist}.
 	\verb!dot = "\\dot{$1}$0";!  & \texttt{dot}\cmdkey\shiftkey. & \verb!\dot{}! & Overdot \\
 	\verb!sub = "_{$1}$0";!      & \texttt{sub}\cmdkey\shiftkey. & \verb!_{}!    & Subscript \\
 	\verb!sup = "^{$1}$0";!      & \texttt{sup}\cmdkey\shiftkey. & \verb!^{}!    & Superscript \\
-	\verb!dotsub = "\\dot{$1}_{$2} $0";! & \texttt{dotsub}\cmdkey\shiftkey. & \verb!\dot{}_{}! & Overdot with subscript \\  
-	\verb!dotsup = "\\dot{$1}^{$2} $0";! & \texttt{dotsup}\cmdkey\shiftkey. & \verb!\dot{}^{}! & Overdot with superscript \\  
-	\verb!dotsubsup = "\\dot{$1}_{$2}^{$3} $0";! & \texttt{dotsubsup}\cmdkey\shiftkey. & \verb!\dot{}_{}^{}! & Overdot with sub- and super-scripts  \\  
-	\verb!dotsupsub = "\\dot{$1}_{$2}^{$3} $0";! & \texttt{dotsupsub}\cmdkey\shiftkey. & \verb!\dot{}_{}^{}! & Overdot with sub- and super-scripts  \\  
+	\verb!dotsub = "\\dot{$1}_{$2}$0";! & \texttt{dotsub}\cmdkey\shiftkey. & \verb!\dot{}_{}! & Overdot with subscript \\  
+	\verb!dotsup = "\\dot{$1}^{$2}$0";! & \texttt{dotsup}\cmdkey\shiftkey. & \verb!\dot{}^{}! & Overdot with superscript \\  
+	\verb!dotsubsup = "\\dot{$1}_{$2}^{$3}$0";! & \texttt{dotsubsup}\cmdkey\shiftkey. & \verb!\dot{}_{}^{}! & Overdot with sub- and super-scripts  \\  
+	\verb!dotsupsub = "\\dot{$1}_{$2}^{$3}$0";! & \texttt{dotsupsub}\cmdkey\shiftkey. & \verb!\dot{}_{}^{}! & Overdot with sub- and super-scripts  \\  
 	\verb!mr = "\\mathrm{$1}$0";!  & \texttt{mr}\cmdkey\shiftkey.  & \verb!\mathrm{}! & Removes math typsetting\\
 \end{tabular}
 \label{tab:additions_to_plist}
 \end{table}
 
 % section sec:keyboard_shortcuts (end)
-
+selection
 
 %%%%%%%%%%%%%%%%%%%%
 \section{Document Viewing and Typesetting} % (fold)
